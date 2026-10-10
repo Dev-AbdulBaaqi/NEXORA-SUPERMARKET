@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360">
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1">
+      <stop stop-color="#e8f3ed"/>
+      <stop offset="1" stop-color="#f8f3e5"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" fill="url(#sky)"/>
+  <circle cx="490" cy="72" r="38" fill="#ffc928" opacity=".8"/>
+  <path d="M72 286h456" stroke="#6c9971" stroke-width="12" stroke-linecap="round"/>
+  <path d="M140 155h320v131H140z" fill="#fff" stroke="#d9e3d8" stroke-width="5"/>
+  <path d="m119 158 37-78h288l37 78Z" fill="#063b2b"/>
+  <path d="M147 156h306v20H147z" fill="#16834a"/>
+  <path d="M165 176v111m270-111v111" stroke="#d9e3d8" stroke-width="5"/>
+  <rect x="188" y="199" width="95" height="87" rx="8" fill="#d5e9e1"/>
+  <rect x="298" y="199" width="129" height="87" rx="8" fill="#edf3eb"/>
+  <path d="M200 218h70m-70 15h70m-70 15h70" stroke="#9fc5b4" stroke-width="6" stroke-linecap="round"/>
+  <path d="M322 267q25-51 50 0m-50 0h50" fill="none" stroke="#16834a" stroke-width="8" stroke-linecap="round"/>
+  <path d="M177 127h246" stroke="#ffc928" stroke-width="9" stroke-linecap="round"/>
+  <text x="300" y="119" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" font-weight="700" letter-spacing="2" fill="#fff">NEXORA MARKET</text>
+  <path d="M96 255q19-29 38 0v31H96zm370 0q19-29 38 0v31h-38z" fill="#16834a"/>
+  <circle cx="113" cy="290" r="11" fill="#063b2b"/>
+  <circle cx="487" cy="290" r="11" fill="#063b2b"/>
+</svg>

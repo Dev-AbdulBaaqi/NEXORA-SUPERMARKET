@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Nexora Supermarket. Shop smarter. Live better." />
+    <title>NEXORA | Shop Smarter. Live Better.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-theme="light">
+    <header class="site-header">
+        <div class="announcement-bar container">
+            <span>LEKKI, LAGOS · SUPERMARKET WEBSITE DEMO</span>
+            <span>Sample products and prices · no live inventory</span>
+        </div>
+
+        <nav class="navbar container" aria-label="Main navigation">
+            <a href="#home" class="logo" aria-label="Nexora home">
+                <img src="Nexora%20Supermarket%20Logo.png" alt="Nexora Supermarket" />
+            </a>
+
+            <div class="nav-links" aria-label="Main menu">
+                <a href="#home">Home</a>
+                <a href="#shop">Shop</a>
+                <a href="#categories">Categories</a>
+                <a href="#offers">Offers</a>
+                <a href="#why-nexora">Why Nexora?</a>
+                <a href="#about-us">About Us</a>
+                <a href="#track-order">Track Order</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="nav-actions">
+                <label class="search-box" aria-label="Search products">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 015.94 12.56l4.31 4.31 1.41-1.41-4.31-4.31A7.5 7.5 0 1110.5 3zm0 2a5.5 5.5 0 103.86 9.4A5.5 5.5 0 0010.5 5z"/></svg>
+                    <input id="searchInput" type="search" placeholder="Search products" />
+                </label>
+
+                <a class="account-button" href="#contact">Contact</a>
+                <button id="cartToggle" class="cart-button" type="button" aria-label="Open cart">
+                    Cart
+                    <span id="cartCount">0</span>
+                </button>
+            </div>
+
+            <button class="menu-button" id="menuButton" type="button" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">☰</button>
+        </nav>
+
+        <div class="mobile-menu" id="mobileMenu" aria-label="Mobile menu" aria-hidden="true">
+            <label class="search-box mobile-search-box" aria-label="Search products">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 015.94 12.56l4.31 4.31 1.41-1.41-4.31-4.31A7.5 7.5 0 1110.5 3zm0 2a5.5 5.5 0 103.86 9.4A5.5 5.5 0 0010.5 5z"/></svg>
+                <input id="mobileSearchInput" type="search" placeholder="Search products" />
+            </label>
+            <a href="#home">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#categories">Categories</a>
+            <a href="#offers">Offers</a>
+            <a href="#why-nexora">Why Nexora?</a>
+            <a href="#about-us">About Us</a>
+            <a href="#track-order">Track Order</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+            <button type="button" class="mobile-cart-trigger" id="mobileCartTrigger">Open cart</button>
+        </div>
+    </header>
+
+    <aside class="cart-panel" id="cartPanel" aria-label="Shopping cart">
+        <div class="cart-header">
+            <div>
+                <p class="eyebrow">Basket</p>
+                <h3>Your cart</h3>
+            </div>
+            <button id="closeCart" type="button" aria-label="Close cart">×</button>
+        </div>
+
+        <div id="cartItems" class="cart-items"></div>
+
+        <p class="cart-demo-note">Demo basket only. Final delivery charges and product availability require store confirmation.</p>
+        <p id="cartFeedback" class="cart-feedback" role="status" aria-live="polite"></p>
+
+        <div class="order-summary">
+            <div><span>Subtotal</span><strong id="subtotalValue">₦0</strong></div>
+            <div><span>Delivery (not calculated)</span><strong id="deliveryValue">—</strong></div>
+            <div><span>Discount</span><strong id="discountValue">—</strong></div>
+            <div class="grand-total"><span>Total before delivery</span><strong id="totalValue">₦0</strong></div>
+        </div>
+
+        <button id="checkoutButton" class="checkout-button" type="button">Preview demo checkout</button>
+    </aside>
+
+    <main>
+        <section class="hero container" id="home">
+            <div class="hero-copy reveal">
+                <p class="eyebrow">Nexora Supermarket · Lekki, Lagos</p>
+                <h1>Fresh Products<br />for a <span>Better You</span></h1>
+                <p class="lead">
+                    Quality groceries, household essentials, and more — all in one place. Shop smarter, live better with Nexora.
+                </p>
+                <div class="hero-actions">
+                    <a href="#shop" class="primary-button">Start Shopping</a>
+                    <a href="#categories" class="secondary-button">Explore Categories</a>
+                </div>
+                <p class="hero-tagline">Shop Smarter. Live Better.</p>
+            </div>
+
+            <div class="hero-note reveal">
+                <span>YOUR NEIGHBOURHOOD SHOPPING DEMO</span>
+                <strong>Good food.<br />Good everyday.</strong>
+                <a href="#shop">Browse sample products <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+
+        <section class="categories container reveal" id="categories">
+            <div class="section-header compact">
+                <div>
+                    <p class="eyebrow">Browse by category</p>
+                    <h2>What are you shopping for?</h2>
+                </div>
+            </div>
+
+            <div class="category-row" aria-label="Filter products by category">
+                <button class="category-pill active" type="button" data-filter="all" aria-pressed="true">
+                    <img class="category-image" src="images/category-all.svg" alt="" /><span>All</span>
+                </button>
+                <button class="category-pill" type="button" data-filter="Groceries" aria-pressed="false">
+                    <img class="category-image" src="images/groceries.jpg" alt="" /><span>Groceries</span>
+                </button>
+                <button class="category-pill" type="button" data-filter="Beverages" aria-pressed="false">
+                    <img class="category-image" src="images/beverages.jpg" alt="" /><span>Beverages</span>
+                </button>
+                <button class="category-pill" type="button" data-filter="Snacks & Treats" aria-pressed="false">
+                    <img class="category-image" src="images/snacks.jpg" alt="" /><span>Snacks &amp; Treats</span>
+                </button>
+                <button class="category-pill" type="button" data-filter="Household Essentials" aria-pressed="false">
+                    <img class="category-image" src="images/household.jpg" alt="" /><span>Household Essentials</span>
+                </button>
+                <button class="category-pill" type="button" data-filter="Personal Care" aria-pressed="false">
+                    <img class="category-image" src="images/personal-care.jpg" alt="" /><span>Personal Care</span>
+                </button>
+                <button class="category-pill" type="button" data-filter="Electronics" aria-pressed="false">
+                    <img class="category-image" src="images/electronics.jpg" alt="" /><span>Electronics</span>
+                </button>
+                <button class="category-pill" type="button" data-filter="Baby Care" aria-pressed="false">
+                    <img class="category-image" src="images/baby-care.jpg" alt="" /><span>Baby Care</span>
+                </button>
+                <button class="category-pill" type="button" data-filter="Fresh Produce" aria-pressed="false">
+                    <img class="category-image" src="images/category-fresh-produce.svg" alt="" /><span>Fresh Produce</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="catalog container reveal" id="shop">
+            <div class="section-header">
+                <div>
+                    <p class="eyebrow">Featured products · sample catalogue</p>
+                    <h2>Everyday products</h2>
+                    <p class="catalog-note">Illustrative product names and NGN prices for demo purposes; not connected to live inventory.</p>
+                </div>
+                <div class="catalog-tools">
+                    <select id="sortSelect" aria-label="Sort products">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: low to high</option>
+                        <option value="price-high">Price: high to low</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="productGrid" class="product-grid" aria-live="polite"></div>
+        </section>
+
+        <section class="offers-section reveal" id="offers">
+          <div class="container">
+            <div class="section-header">
+                <div>
+                    <p class="eyebrow">Special offers · preview</p>
+                    <h2>Offer concepts for Nexora</h2>
+                </div>
+                <span class="demo-label">DEMO CONTENT — NOT LIVE DISCOUNTS</span>
+            </div>
+            <div class="promo-grid">
+            <article class="promo-card promo-orange">
+                <div>
+                    <p class="eyebrow">Fresh produce</p>
+                    <h3>A seasonal fruit and vegetable selection</h3>
+                    <a href="#shop" data-category-link="Fresh Produce">Browse fresh produce</a>
+                </div>
+                <img src="images/offer-fresh-basket.svg" alt="Illustration of a basket of fresh market produce" />
+            </article>
+
+            <article class="promo-card promo-navy">
+                <div>
+                    <p class="eyebrow">Home care</p>
+                    <h3>Useful essentials for a well-stocked home</h3>
+                    <a href="#shop" data-category-link="Household Essentials">Browse home care</a>
+                </div>
+                <img src="images/offer-home-care.svg" alt="Illustration of household cleaning products" />
+            </article>
+
+            <article class="promo-card promo-gold">
+                <div>
+                    <p class="eyebrow">Everyday favourites</p>
+                    <h3>Drinks and snacks for the whole household</h3>
+                    <a href="#shop" data-category-link="Beverages">Browse beverages</a>
+                </div>
+                <img src="images/offer-refreshments.svg" alt="Illustration of drinks and refreshments" />
+            </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="why-section reveal" id="why-nexora">
+            <div class="container">
+                <p class="eyebrow">Why choose Nexora?</p>
+                <h2>A simpler way to plan your everyday shop.</h2>
+                <div class="benefits">
+                    <article>
+                        <span aria-hidden="true">01</span>
+                        <h3>Browse in one place</h3>
+                        <p>Explore groceries, household goods, personal care, and more by category.</p>
+                    </article>
+                    <article>
+                        <span aria-hidden="true">02</span>
+                        <h3>See clear sample prices</h3>
+                        <p>Demo prices and a running cart total make the shopping flow easy to preview.</p>
+                    </article>
+                    <article>
+                        <span aria-hidden="true">03</span>
+                        <h3>Made for local shopping</h3>
+                        <p>A supermarket concept designed around Lekki, Lagos. Store services need business configuration.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section container reveal" id="about-us">
+            <div class="about-copy">
+                <p class="eyebrow">About Nexora</p>
+                <h2>Everyday shopping, made more thoughtful.</h2>
+                <p>
+                    Nexora is a supermarket concept for Lekki, Lagos, bringing groceries, fresh produce, and household essentials together in one easy-to-browse place.
+                </p>
+                <a href="#contact" class="secondary-button">Talk to our team</a>
+            </div>
+            <figure class="about-photo">
+                <img src="images/about-shopping.svg" alt="Illustration representing a thoughtful local grocery shop" />
+            </figure>
+            <div class="about-values">
+                <article>
+                    <span>01</span>
+                    <div>
+                        <h3>A broad everyday selection</h3>
+                        <p>Categories cover pantry staples, fresh produce, home care, and more.</p>
+                    </div>
+                </article>
+                <article>
+                    <span>02</span>
+                    <div>
+                        <h3>Designed for convenience</h3>
+                        <p>Find products quickly with search, category filters, and sorting.</p>
+                    </div>
+                </article>
+                <article>
+                    <span>03</span>
+                    <div>
+                        <h3>Transparent demo experience</h3>
+                        <p>This storefront clearly marks sample products and tracking records.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="track-section reveal" id="track-order">
+          <div class="container track-layout">
+            <div class="track-copy">
+                <p class="eyebrow">Track an order</p>
+                <h2>Check an order’s progress.</h2>
+                <p>There is no order-management backend connected. Use one of the sample IDs below to preview the tracking interface; these are not real customer orders.</p>
+                <div class="demo-order-ids">
+                    <span>DEMO-NX-1042</span>
+                    <span>DEMO-NX-2086</span>
+                </div>
+            </div>
+            <div class="tracking-card">
+                <form id="trackingForm" class="tracking-form" novalidate>
+                    <label for="orderNumber">Order number</label>
+                    <div class="tracking-input-row">
+                        <input id="orderNumber" name="orderNumber" type="text" autocomplete="off" placeholder="e.g. DEMO-NX-1042" aria-describedby="trackingHelp trackingMessage" required />
+                        <button class="track-button" type="submit">Track Order</button>
+                    </div>
+                    <p id="trackingHelp" class="form-hint">Demo accepts DEMO-NX-1042 and DEMO-NX-2086 only.</p>
+                    <p id="trackingMessage" class="form-message" role="status" aria-live="polite"></p>
+                </form>
+                <div id="trackingResult" class="tracking-result" aria-live="polite" hidden></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="benefits container reveal">
+            <article>
+                <span>01</span>
+                <h3>Find items quickly</h3>
+                <p>Use category browsing, sorting, and keyword search across the sample catalogue.</p>
+            </article>
+            <article>
+                <span>02</span>
+                <h3>Review your basket</h3>
+                <p>Adjust quantities and see the total update in this browser-based demo.</p>
+            </article>
+            <article>
+                <span>03</span>
+                <h3>Know what is connected</h3>
+                <p>Checkout, tracking, and contact do not submit customer data to a server.</p>
+            </article>
+        </section>
+
+        <section class="newsletter container reveal">
+            <div>
+                <p class="eyebrow">Stay in the loop</p>
+                <h2>Ask about store updates and upcoming offers.</h2>
+            </div>
+            <a class="newsletter-contact" href="#contact">Contact Nexora</a>
+        </section>
+
+        <section class="reviews-section reveal" id="reviews" aria-labelledby="reviewsHeading">
+            <div class="container">
+                <div class="reviews-heading">
+                    <div>
+                        <p class="eyebrow">Your experience matters</p>
+                        <h2 id="reviewsHeading">What Our Customers Say</h2>
+                        <p>Share your Nexora shopping experience and help us serve you better.</p>
+                    </div>
+                    <button class="write-review-button" id="writeReviewButton" type="button" aria-expanded="false" aria-controls="reviewForm">
+                        Write a Review
+                    </button>
+                </div>
+                <p class="reviews-storage-note">Reviews are saved only in this browser on this device. They are not shared with other customers or sent to Nexora.</p>
+                <div class="review-list" id="reviewList" aria-live="polite" aria-relevant="additions">
+                    <p class="empty-reviews">No customer reviews yet. Be the first to share your experience.</p>
+                </div>
+                <form class="review-form" id="reviewForm" hidden novalidate>
+                    <h3>Write your review</h3>
+                    <p class="review-form-note">Your review will be stored locally in this browser only. Please do not include sensitive personal information.</p>
+                    <label for="reviewerName">Customer name</label>
+                    <input id="reviewerName" name="name" type="text" autocomplete="name" minlength="2" maxlength="80" required />
+                    <fieldset class="rating-fieldset">
+                        <legend>Star rating</legend>
+                        <div class="review-rating-input">
+                            <input id="rating1" name="rating" type="radio" value="1" required />
+                            <label for="rating1" aria-label="1 star">★</label>
+                            <input id="rating2" name="rating" type="radio" value="2" />
+                            <label for="rating2" aria-label="2 stars">★</label>
+                            <input id="rating3" name="rating" type="radio" value="3" />
+                            <label for="rating3" aria-label="3 stars">★</label>
+                            <input id="rating4" name="rating" type="radio" value="4" />
+                            <label for="rating4" aria-label="4 stars">★</label>
+                            <input id="rating5" name="rating" type="radio" value="5" />
+                            <label for="rating5" aria-label="5 stars">★</label>
+                        </div>
+                        <span class="rating-hint">Select a rating from 1 to 5.</span>
+                    </fieldset>
+                    <label for="reviewTitle">Review title</label>
+                    <input id="reviewTitle" name="title" type="text" minlength="3" maxlength="100" required />
+                    <label for="reviewText">Written review</label>
+                    <textarea id="reviewText" name="review" rows="5" minlength="10" maxlength="1000" required></textarea>
+                    <button class="submit-review-button" type="submit">Submit Review</button>
+                </form>
+                <p id="reviewFeedback" class="form-message review-feedback" role="status" aria-live="polite"></p>
+            </div>
+        </section>
+    </main>
+
+    <section class="contact-section reveal" id="contact">
+        <div class="container contact-layout">
+            <div class="contact-copy">
+                <p class="eyebrow">Contact Nexora</p>
+                <h2>Get in Touch</h2>
+                <p>Questions about shopping with us? We’d be glad to hear from you. Fill in the form and prepare a message locally; this demo does not send submissions.</p>
+                <div class="contact-details" aria-label="Nexora contact information">
+                    <article>
+                        <span class="contact-detail-label">Phone</span>
+                        <strong><a href="tel:+2347016598934">+2347016598934</a></strong>
+                    </article>
+                    <article>
+                        <span class="contact-detail-label">Email</span>
+                        <strong><a href="mailto:alexanderbube1911@gmail.com">alexanderbube1911@gmail.com</a></strong>
+                    </article>
+                    <article>
+                        <span class="contact-detail-label">Store address</span>
+                        <strong>Lekki, Lagos, Nigeria (exact address to be confirmed).</strong>
+                    </article>
+                </div>
+            </div>
+            <form class="contact-form" id="contactForm" novalidate>
+                <h3>Prepare a message</h3>
+                <label for="contactName">Full name</label>
+                <input id="contactName" name="name" type="text" autocomplete="name" required minlength="2" />
+                <label for="contactEmail">Email address</label>
+                <input id="contactEmail" name="email" type="email" autocomplete="email" required />
+                <label for="contactSubject">Subject</label>
+                <input id="contactSubject" name="subject" type="text" required minlength="3" />
+                <label for="contactMessage">Message</label>
+                <textarea id="contactMessage" name="message" rows="4" required minlength="10"></textarea>
+                <button class="contact-submit" type="submit">Prepare Message</button>
+                <p id="contactFeedback" class="form-message" role="status" aria-live="polite"></p>
+                <button id="copyContactMessage" class="copy-message" type="button" hidden>Copy message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <a href="#home" class="logo" aria-label="Nexora home">
+                    <img src="Nexora%20Supermarket%20Logo.png" alt="Nexora Supermarket" />
+                </a>
+                <p>Premium shopping for homes, families, and everyday living across Lekki, Lagos.</p>
+            </div>
+
+            <div>
+                <h4>Quick links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#offers">Offers</a></li>
+                    <li><a href="#why-nexora">Why Nexora?</a></li>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#track-order">Track Order</a></li>
+                    <li><a href="#reviews">Customer reviews</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Help & support</h4>
+                <ul>
+                    <li><a href="#contact">Delivery information</a></li>
+                    <li><a href="#contact">Returns enquiries</a></li>
+                    <li><a href="#contact">FAQs & customer care</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Contact</h4>
+                <ul>
+                    <li>Lekki, Lagos, Nigeria</li>
+                    <li>Use the contact message form</li>
+                    <li><a href="#contact">Send an enquiry</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom container">
+            <p>© 2026 NEXORA. All rights reserved.</p>
+            <p class="footer-demo-note">Demo storefront · catalogue, prices, and tracking are sample data.</p>
+        </div>
+    </footer>
+
+    <div class="checkout-modal" id="checkoutModal" aria-hidden="true">
+        <div class="modal-card">
+            <button class="close-modal" id="closeModal" type="button" aria-label="Close checkout">×</button>
+            <p class="eyebrow">Demo only · no payment</p>
+            <h3>Preview checkout</h3>
+            <p class="checkout-demo-note">This page cannot place a real order. No personal details are sent to a server and no payment is collected.</p>
+            <form id="checkoutForm">
+                <div class="form-grid">
+                    <label for="checkoutName">Full name</label>
+                    <input id="checkoutName" type="text" name="fullName" autocomplete="name" required minlength="2" />
+                    <label for="checkoutEmail">Email address</label>
+                    <input id="checkoutEmail" type="email" name="email" autocomplete="email" required />
+                    <label for="checkoutPhone">Phone number</label>
+                    <input id="checkoutPhone" type="tel" name="phone" autocomplete="tel" required />
+                    <label for="checkoutAddress">Delivery address</label>
+                    <input id="checkoutAddress" type="text" name="address" autocomplete="street-address" required />
+                </div>
+                <button type="submit" class="checkout-button">Preview only</button>
+                <p id="checkoutMessage" aria-live="polite"></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

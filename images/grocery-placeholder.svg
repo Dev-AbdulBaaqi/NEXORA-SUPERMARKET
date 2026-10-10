@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title">
+  <title id="title">Nexora grocery image placeholder</title>
+  <rect width="800" height="520" fill="#f7f5ef"/>
+  <rect x="96" y="98" width="608" height="324" rx="36" fill="#e5eee7"/>
+  <path d="M224 330h352l-35 52H260z" fill="#063b2b"/>
+  <path d="M252 308l36-148h210l50 148z" fill="#16834a"/>
+  <circle cx="326" cy="188" r="38" fill="#ffc928"/>
+  <circle cx="402" cy="178" r="42" fill="#f28145"/>
+  <circle cx="482" cy="198" r="36" fill="#8fbd55"/>
+  <path d="M397 128c-12-28 2-48 25-53 6 22-2 40-25 53zm-82 15c-5-24 8-39 29-39 0 19-10 33-29 39zm174 15c2-24 18-36 38-30-4 19-18 31-38 30z" fill="#16834a"/>
+  <text x="400" y="395" text-anchor="middle" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#063b2b">FRESH PICKS FROM NEXORA</text>
+</svg>
